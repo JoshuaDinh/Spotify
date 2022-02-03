@@ -1,7 +1,10 @@
 .sidebar {
-  border: 1px solid grey;
+  min-height: 100vh;
+  max-height: 100vh;
+  border-right: 1px solid grey;
   color: rgb(128, 128, 128);
-  padding: 20px;
+  padding: 1.25rem;
+  overflow-y: scroll;
 }
 
 .button {
@@ -21,4 +24,36 @@
 
 .break {
   border: 1px solid rgb(128, 128, 128);
+}
+
+.playlist {
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+.playlist:hover {
+  color: rgb(255, 255, 255);
+}
+
+/* Media Queries */
+/* Small */
+@media (max-width: 640px) {
+  .sidebar {
+    max-width: 12rem;
+    display: none;
+  }
+}
+
+/* Medium */
+@media (min-width: 768px) {
+  .sidebar {
+    display: block;
+  }
+}
+
+/* Large */
+@media (min-width: 1024px) {
+  .sidebar {
+    max-width: 15rem;
+  }
 }

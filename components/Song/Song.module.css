@@ -1,0 +1,72 @@
+.song {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.song:hover {
+  background: rgb(26, 32, 44);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.container > p {
+  min-width: 2rem;
+}
+
+.image {
+  height: 3rem;
+  width: 3rem;
+}
+
+.track {
+  margin-left: 1rem;
+  min-width: 15rem;
+  width: 100%;
+}
+
+.track > p:first-child {
+  width: 9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.track > p:last-child {
+  color: rgb(128, 128, 128);
+}
+
+.album {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(128, 128, 128);
+}
+
+.albumName {
+  display: none;
+}
+
+/* Media Queries */
+
+/* Medium */
+@media (min-width: 768px) {
+  .albumName {
+    display: inline-flex;
+    width: 10rem;
+  }
+  .details:last-child {
+    margin-left: 0;
+  }
+}
+
+/* Large */
+@media (min-width: 1024px) {
+  .track > p:first-child {
+    width: 16rem;
+  }
+}

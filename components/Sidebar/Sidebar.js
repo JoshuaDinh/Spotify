@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Sidebar.module.css";
 import {
   HomeIcon,
@@ -9,15 +9,33 @@ import {
   RssIcon,
 } from "@heroicons/react/outline";
 import { signOut, useSession } from "next-auth/react";
+import useSpotify from "../../hooks/useSpotify";
+import { useRecoilState } from "recoil";
+import { playlistIdState } from "../../atoms/playlistAtom";
 
 function Sidebar() {
+  const spotifyApi = useSpotify();
   const { data: session, status } = useSession();
+  const [playlists, setPlaylists] = useState([]);
+  const [playlistId, setPlaylistId] = useRecoilState(playlistIdState);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await spotifyApi.getUserPlaylists();
+        setPlaylists(data.body.items);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    if (spotifyApi.getAccessToken()) {
+      fetchData();
+    }
+  }, [session, spotifyApi]);
+
   return (
     <div className={styles.sidebar}>
       <div>
-        <button className={styles.button} onClick={() => signOut()}>
-          <span className={styles.paragraph}>LogOut</span>
-        </button>
         <button className={styles.button}>
           <HomeIcon className="h-5 w-5" />
           <span className={styles.paragraph}>Home </span>
@@ -44,18 +62,17 @@ function Sidebar() {
           <span className={styles.paragraph}> Your Episodes</span>
         </button>
       </div>
-      <div>playlist</div>
-      <div>playlist</div>
-      <div>playlist</div>
-      <div>playlist</div>
-      <div>playlist</div>
-      <div>playlist</div>
-      <div>playlist</div>
-      <div>playlist</div>
-      <div>playlist</div>
-      <div>playlist</div>
-      <div>playlist</div>
-      <div>playlist</div>
+      {playlists.map((playlist) => {
+        return (
+          <p
+            key={playlist.id}
+            className={styles.playlist}
+            onClick={() => setPlaylistId(playlist.id)}
+          >
+            {playlist.name}
+          </p>
+        );
+      })}
     </div>
   );
 }

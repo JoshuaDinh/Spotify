@@ -1,0 +1,8 @@
+.songs {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.25rem;
+  padding: 0 2rem;
+  padding-bottom: 7rem;
+  color: rgb(255, 255, 255);
+}

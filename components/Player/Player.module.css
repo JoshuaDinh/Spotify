@@ -1,0 +1,11 @@
+.player {
+  position: sticky;
+  bottom: 0;
+  height: 10vh;
+  border: 1px solid white;
+}
+
+.image {
+  height: 2.5rem;
+  width: 2.5rem;
+}

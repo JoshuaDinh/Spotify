@@ -1,0 +1,47 @@
+.center {
+  flex-grow: 2;
+  color: rgb(255, 255, 255);
+}
+
+.section {
+  display: flex;
+  align-items: flex-end;
+  height: 20rem;
+  width: 100%;
+  padding: 2rem;
+}
+
+.playlistImage {
+  height: 12rem;
+  width: 12rem;
+  margin-right: 1rem;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+.playlistTitle {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.songContainer {
+  height: 35rem;
+  overflow-y: scroll;
+}
+
+/* Media Queries */
+
+/* Medium */
+@media (min-width: 768px) {
+  .playlistTitle {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+/* Large */
+@media (min-width: 1024px) {
+  .playlistTitle {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}

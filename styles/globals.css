@@ -9,11 +9,41 @@
   font-size: 0.9rem;
   font-weight: 600;
 }
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 255, 255);
+}
+
+body {
+  max-height: 100vh;
+  overflow: hidden;
+}
 
 .home {
-  min-height: 100vh;
-  max-height: 100vh;
-
   background: #000;
-  overflow: hidden;
+}
+
+.home > main {
+  display: flex;
+}
+
+/* Media Queries */
+/* Small */
+@media (max-width: 640px) {
+}
+
+/* Medium */
+@media (min-width: 768px) {
+}
+
+/* Large */
+@media (min-width: 1024px) {
 }
