@@ -1,11 +1,59 @@
 .player {
   position: sticky;
   bottom: 0;
-  height: 10vh;
-  border: 1px solid white;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 0 2rem;
+  color: #fff;
+}
+
+.leftContainer {
+  display: flex;
+  align-items: center;
+  height: 6rem;
 }
 
 .image {
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 3.75rem;
+  width: 3.75rem;
+  border-radius: 10px;
+  margin-left: 1rem;
+}
+
+.wrapper {
+  margin-left: 1rem;
+}
+
+.button {
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+  transition: 0.5 ease-in;
+}
+
+.button:hover {
+  transform: scale(1.25);
+}
+
+.innerButton {
+  height: 3.25rem;
+  width: 3.25rem;
+  cursor: pointer;
+}
+
+.centerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.rightContainer {
+  display: flex;
+  align-items: center;
+  justify-self: flex-end;
+  padding-right: 1rem;
+}
+
+.rightContainer > input {
+  margin: 0 1rem;
 }

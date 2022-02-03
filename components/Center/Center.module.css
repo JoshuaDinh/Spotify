@@ -14,6 +14,7 @@
 .playlistImage {
   height: 12rem;
   width: 12rem;
+  border-radius: 10px;
   margin-right: 1rem;
   box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 }
