@@ -19,6 +19,7 @@ const Player = () => {
   // Custom Hook to retrieve song details
   const songInfo = useSongInfo();
 
+  //Use song details to get player controls
   const fetchCurrentSong = async () => {
     if (!songInfo) {
       try {
