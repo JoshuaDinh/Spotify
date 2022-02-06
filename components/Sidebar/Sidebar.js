@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Visualizer from "../Visualizer/Visualizer";
 import styles from "./Sidebar.module.css";
 import {
   HomeIcon,
@@ -8,7 +9,7 @@ import {
   HeartIcon,
   RssIcon,
 } from "@heroicons/react/outline";
-import { signOut, useSession } from "next-auth/react";
+import { useSession } from "next-auth/react";
 import useSpotify from "../../hooks/useSpotify";
 import { useRecoilState } from "recoil";
 import { playlistIdState } from "../../atoms/playlistAtom";
@@ -35,6 +36,7 @@ function Sidebar() {
 
   return (
     <div className={styles.sidebar}>
+      <Visualizer />
       <div>
         <button className={styles.button}>
           <HomeIcon className="h-5 w-5" />

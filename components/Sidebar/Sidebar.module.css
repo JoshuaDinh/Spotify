@@ -1,10 +1,9 @@
 .sidebar {
   min-height: 100vh;
   max-height: 100vh;
-  border-right: 1px solid grey;
-  color: rgb(128, 128, 128);
   padding: 1.25rem;
   overflow-y: scroll;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .button {
@@ -14,7 +13,7 @@
 }
 
 .button:hover {
-  color: rgb(255, 255, 255);
+  color: rgb(110, 110, 110);
 }
 
 .paragraph {

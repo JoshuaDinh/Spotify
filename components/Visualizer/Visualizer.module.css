@@ -1,0 +1,131 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem 0;
+}
+.loader {
+  position: relative;
+  height: 20px;
+  margin: auto 0;
+}
+
+.loader > div {
+  position: relative;
+  display: inline-block;
+  background: #1db954;
+  height: 100%;
+  width: 6px;
+  margin: 0 3px;
+  -webkit-animation: load 3s ease-in-out infinite;
+  animation: load 3s ease-in-out infinite;
+}
+
+.loader .rectangle2 {
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+
+.loader .rectangle3 {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+.loader .rectangle4 {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+.loader .rectangle5 {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+.loader .rectangle6 {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+@-moz-keyframes load {
+  0%,
+  100% {
+    transform: scaleY(1);
+    background: #1db954;
+  }
+  16.67% {
+    transform: scaleY(3);
+    background: #000;
+  }
+  33.33% {
+    transform: scaleY(1);
+    background: rgb(110, 110, 110);
+  }
+  50% {
+    transform: scaleY(3);
+    background: #1db954;
+  }
+  66.67% {
+    transform: scaleY(1);
+    background: #000;
+  }
+  83.34% {
+    transform: scaleY(3);
+    background: rgb(110, 110, 110);
+  }
+}
+
+@-webkit-keyframes load {
+  0%,
+  100% {
+    transform: scaleY(1);
+    background: #1db954;
+  }
+  16.67% {
+    transform: scaleY(3);
+    background: #000;
+  }
+  33.33% {
+    transform: scaleY(1);
+    background: rgb(110, 110, 110);
+  }
+  50% {
+    transform: scaleY(3);
+    background: #1db954;
+  }
+  66.67% {
+    transform: scaleY(1);
+    background: #000;
+  }
+  83.34% {
+    transform: scaleY(3);
+    background: rgb(110, 110, 110);
+  }
+}
+
+@keyframes load {
+  0%,
+  100% {
+    transform: scaleY(1);
+    background: #1db954;
+  }
+  16.67% {
+    transform: scaleY(3);
+    background: #000;
+  }
+  33.33% {
+    transform: scaleY(1);
+    background: rgb(110, 110, 110);
+  }
+  50% {
+    transform: scaleY(3);
+    background: #1db954;
+  }
+  66.67% {
+    transform: scaleY(1);
+    background: #000;
+  }
+  83.34% {
+    transform: scaleY(3);
+    background: rgb(110, 110, 110);
+  }
+}

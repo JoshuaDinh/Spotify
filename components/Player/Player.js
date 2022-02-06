@@ -66,8 +66,6 @@ const Player = () => {
     []
   );
 
-  console.log(volume);
-
   // Handles Playing and pausing of current track
   const handlePlayPause = async () => {
     spotifyApi.getMyCurrentPlaybackState().then((data) => {
@@ -83,7 +81,7 @@ const Player = () => {
 
   return (
     <div
-      className={`${styles.player}  bg-gradient-to-b from-black to-gray-900`}
+      className={`${styles.player}  bg-gradient-to-b from-white to-gray-400`}
     >
       {/* Left side of Player  Track details */}
       <div className={styles.leftContainer}>

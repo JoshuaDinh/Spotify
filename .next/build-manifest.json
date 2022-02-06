@@ -30,11 +30,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/_middleware": [
+    "/login": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "server/middleware-runtime.js",
-      "server/pages/_middleware.js"
+      "static/chunks/pages/login.js"
     ]
   },
   "ampFirstPages": []

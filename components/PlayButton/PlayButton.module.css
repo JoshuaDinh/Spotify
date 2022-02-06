@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  align-items: center;
+  min-height: 15vh;
+}
+
+.playIcon {
+  height: 5rem;
+  width: 5rem;
+  margin: 0 1.5rem;
+  fill: rgb(110, 110, 110);
+  cursor: pointer;
+  transition: 0.25s ease-in;
+}
+
+.playIcon:hover {
+  transform: scale(1.075);
+}
+
+.heartIcon,
+.dotsIcon {
+  height: 3rem;
+  width: 3rem;
+  margin: 0 1rem;
+  cursor: pointer;
+  transition: 0.25s ease-in;
+}
+
+.heartIcon:hover {
+  fill: rgb(110, 110, 110);
+  stroke: rgb(110, 110, 110);
+}

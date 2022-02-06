@@ -1,14 +1,10 @@
 .center {
   flex-grow: 2;
-  color: rgb(255, 255, 255);
 }
 
-.section {
-  display: flex;
-  align-items: flex-end;
-  height: 20rem;
-  width: 100%;
-  padding: 2rem;
+.playlistContainer > p {
+  font-size: 1.5rem;
+  color: rgb(110, 110, 110);
 }
 
 .playlistImage {
@@ -20,8 +16,78 @@
 }
 
 .playlistTitle {
-  font-size: 1.5rem;
   line-height: 2rem;
+  color: rgb(110, 110, 110);
+}
+
+.playlistDetails > span {
+  margin-left: 0.25rem;
+}
+.playlistDetails > span:last-child {
+  margin-left: 0.75rem;
+}
+
+.song {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.track {
+  display: flex;
+  margin-left: 1rem;
+  min-width: 15rem;
+  width: 100%;
+}
+
+.track > p:first-child {
+  width: 7rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.track > p:last-child {
+  transform: translatex(-1rem);
+  color: rgb(128, 128, 128);
+}
+.container > p {
+  min-width: 1rem;
+}
+
+.track > p {
+  font-size: 1.25rem;
+}
+
+.icon {
+  height: 1.75rem;
+  width: 1.75rem;
+}
+.album {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(128, 128, 128);
+  padding-right: 1rem;
+}
+.album > p {
+  font-size: 1.25rem;
+}
+
+.section {
+  display: flex;
+  align-items: flex-end;
+  height: 20rem;
+  width: 100%;
+  padding: 2rem;
 }
 
 .songContainer {
@@ -42,7 +108,7 @@
 /* Large */
 @media (min-width: 1024px) {
   .playlistTitle {
-    font-size: 3rem;
+    font-size: 5rem;
     line-height: 1;
   }
 }

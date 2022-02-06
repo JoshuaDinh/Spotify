@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Song.module.css";
 import { useRecoilState } from "recoil";
 import { isPlayingState, currentTrackIdState } from "../../atoms/songAtom";
 import { millisToMinutesAndSeconds } from "../../lib/time";
 import useSpotify from "../../hooks/useSpotify";
+import { PlayIcon } from "@heroicons/react/outline";
 
 const Song = ({ order, track }) => {
   const spotifyApi = useSpotify();
+  const [playIcon, setPlayIcon] = useState(false);
   const [currentTrackId, setCurrentTrackId] = useRecoilState(
     currentTrackIdState
   );
@@ -19,9 +21,17 @@ const Song = ({ order, track }) => {
   };
 
   return (
-    <div className={styles.song}>
+    <div
+      className={styles.song}
+      onMouseEnter={() => {
+        setPlayIcon(true);
+      }}
+      onMouseLeave={() => {
+        setPlayIcon(false);
+      }}
+    >
       <div className={styles.container} onClick={playSong}>
-        <p>{order + 1}</p>
+        <p>{playIcon ? <PlayIcon className={styles.icon} /> : order + 1}</p>
         <img
           className={styles.image}
           src={track.track.album.images[0].url}

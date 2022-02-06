@@ -19,7 +19,7 @@ html {
 }
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
-  background: rgb(255, 255, 255);
+  background: rgb(245, 245, 245);
 }
 
 body {
@@ -28,7 +28,7 @@ body {
 }
 
 .home {
-  background: #000;
+  background: rgb(236, 234, 234);
 }
 
 .home > main {
