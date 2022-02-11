@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Center.module.css";
 import Songs from "../Songs/Songs";
-import SignOut from "../SignOut/Signout";
+import SignOut from "../SignOut/SignOut";
 import PlayButton from "../PlayButton/PlayButton";
 import { shuffle } from "lodash";
 import { useSession } from "next-auth/react";
