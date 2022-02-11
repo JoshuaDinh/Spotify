@@ -4,7 +4,7 @@ import { signOut } from "next-auth/react";
 import { ChevronDownIcon } from "@heroicons/react/outline";
 import { useSession } from "next-auth/react";
 
-const Signout = () => {
+const SignOut = () => {
   const { data: session } = useSession();
 
   return (
@@ -26,4 +26,4 @@ const Signout = () => {
   );
 };
 
-export default Signout;
+export default SignOut;
