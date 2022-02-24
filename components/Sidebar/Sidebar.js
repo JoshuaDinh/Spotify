@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Visualizer from "../Visualizer/Visualizer";
 import styles from "./Sidebar.module.css";
 import {
   HomeIcon,
@@ -36,7 +35,6 @@ function Sidebar() {
 
   return (
     <div className={styles.sidebar}>
-      <Visualizer />
       <div>
         <button className={styles.button}>
           <HomeIcon className="h-5 w-5" />

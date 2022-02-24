@@ -1,10 +1,11 @@
 import React from "react";
 import styles from "./Login.module.css";
+import Visualizer from "../Center/Center";
 
 export default function Login({ providers, signIn }) {
   return (
     <div className={styles.login}>
-      <img className={styles.img} src="https:links.papareact.com/9xl" alt="" />
+      <Visualizer />
       {Object.values(providers).map((provider) => {
         return (
           <div key={provider.name}>
