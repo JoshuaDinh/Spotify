@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Login.module.css";
-import Visualizer from "../Center/Center";
+import Visualizer from "../Visualizer/Visualizer";
 
 export default function Login({ providers, signIn }) {
   return (
